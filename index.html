@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Linear Regression</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<body>
+  <div class="login">
+    <h1>Predict mpg</h1>
+    <!--Main inputs for machine learning model-->
+    <form action="{{ url_for('predict')}}"method ="post">
+      <input type="text" name="cyl" placeholder="Cylinder" required="required"/>
+      <input type="text" name="disp" placeholder="Displacement" required="required"/>
+      <input type="text" name="hp" placeholder="Horse power" required="required"/>
+      <input type="text" name="wt" placeholder="weight" required="required"/>
+      <input type="text" name="acc" placeholder="acc" required="required"/>
+      <input type="text" name="yr" placeholder="yr" required="required"/>
+      <input type="text" name="origin" placeholder="origin" required="required"/>
+      <input type="text" name="car_type" placeholder="Car Type" required="required"/>
+      
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  <br>
+  <br>
+  {{prediction_text}}
+  </div>
+  
+</body>  
+</html>
